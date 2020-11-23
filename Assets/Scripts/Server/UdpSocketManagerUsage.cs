@@ -16,18 +16,20 @@ public class UdpSocketManagerUsage : MonoBehaviour {
     private bool _isListenPortLogged = false;//Variável que identifica se a porta está logada
     public ServerController servercontroller;//Variável que recebe os dados do servidor e emite pra outras classes
     public string sessao,cliente;
+    
 
     void Awake(){
         if(Instance == null){ //Identificação para operancia do Singleton
             Instance = this;
             DontDestroyOnLoad(gameObject); //Mantém a instância indestrutível ao mudança de cenas
         }else{
-            //Destroy(gameObject); 
+            //Destroy(this); 
         }
     }
     void Start()
     { 
         Application.runInBackground = true;//Codigo Operante em background
+        //gameState = GameStates.PlayerOffline; //define o estado do jogo como offline no seu inicio
     }
 
     void Update()
@@ -74,12 +76,12 @@ public class UdpSocketManagerUsage : MonoBehaviour {
     /// Função que envia para o servidor as funções de movimentação base (setinhas)
     /// </summary>
     /// <param name="comando">Chave com a string da tecla pressionada</param>
-    public void movimentComands(string comando){
-        _udpSocketManager.send(Encoding.UTF8.GetBytes(comando+","+sessao+","+cliente));
+    public void movimentComands(string comand){
+        _udpSocketManager.send(Encoding.UTF8.GetBytes(comand+","+sessao+","+cliente));
     }
 
     /// <summary>
-    /// Função que realiza a conexão com o servidor; E posteriormente envia dos dados para o Login
+    /// Função que realiza a conexão com o servidor,e posteriormente envia dos dados para o Login;
     /// </summary>
     /// <param name="servidor">Ip do servidor</param>
     /// <param name="port">Porta do servidor</param>
@@ -87,8 +89,8 @@ public class UdpSocketManagerUsage : MonoBehaviour {
     /// <param name="senha">Senha do usuário</param>
     public void ConnectServer(String servidor, int port, String usuario, String senha)
     {
-        _udpSocketManager = new UdpSocketManager(servidor, port);
-        StartCoroutine(_udpSocketManager.initSocket());
+        _udpSocketManager = new UdpSocketManager(servidor, port);//conecta no servidor
+        StartCoroutine(_udpSocketManager.initSocket());//inicializa a comunicação por socket
         Login(usuario,senha);
         
     }
@@ -101,7 +103,7 @@ public class UdpSocketManagerUsage : MonoBehaviour {
     public void Login(String usuario, String senha)
     {
         _udpSocketManager.send(Encoding.UTF8.GetBytes("login,"+usuario+","+senha));
-       Debug.Log("Login realizado!");
+       //Debug.Log("Login realizado!");
     }
 
     /// <summary>
@@ -115,13 +117,13 @@ public class UdpSocketManagerUsage : MonoBehaviour {
 
         while (true)
         {
-            Debug.Log("Batimento..");
+            //Debug.Log("Batimento..");
             //Chave de Heartbeat (chave, sessão, clientID)
             string beatsMsg = "heartbeat," + getword(receivedMsg, 1) +","+ getword(receivedMsg, 2);
 
             _udpSocketManager.send(Encoding.UTF8.GetBytes(beatsMsg));
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(1.0f);//faz a cada um segundo
         }
         
     }

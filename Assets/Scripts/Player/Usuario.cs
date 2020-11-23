@@ -8,33 +8,33 @@ using UnityEngine;
 public class Usuario{
     string name;
     int level;
-    string caminhao;
-    string frete;
+    string vehicle;
+    string delivery;
 
-    public string Getname(){
+    public string GetName(){
         return name;
     }
 
-    public int Getlevel(){
+    public int GetLevel(){
         return level;
     }
 
-    public string Getcaminhao(){
-        return caminhao;
+    public string GetVehicle(){
+        return vehicle;
     }
 
-    public string Getfrete(){
-        return frete;
+    public string GetDelivery(){
+        return delivery;
     }
 
-    Emblemas[] emblemas;
+    Emblem[] emblems;
 
-    Usuario(string name, int level, string caminhao, string frete, Emblemas[] emblemas){
+    public Usuario(string name, int level, string vehicle, string delivery){
         this.name = name;
         this.level = level;
-        this.caminhao = caminhao;
-        this.frete = frete;
-        this.emblemas = emblemas;
+        this.vehicle = vehicle;
+        this.delivery = delivery;
+        //this.emblems = emblems;
     }
 
 }

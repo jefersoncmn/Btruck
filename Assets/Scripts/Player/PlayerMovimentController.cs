@@ -28,6 +28,7 @@ public class PlayerMovimentController : Subject
     public void Moviment_Forward(){
         
         Notify("Forward", NotificationTypes.moviment);
+        //print("Frente");
     }
 
     public void Moviment_Left(){

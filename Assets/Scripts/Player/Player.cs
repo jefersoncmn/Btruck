@@ -12,12 +12,14 @@ public class Player : MonoBehaviour
     int level;
     List<Vehicle> vehicles;
     Vehicle selectedVehicle;
+    
     public Player(string nameUser, double money, int level, List<Vehicle> vehicles){
         this.nameUser = nameUser;
         this.money = money;
         this.level = level;
         this.vehicles = vehicles;
     }
+
     public string getnameUser(){
         return nameUser;
     }

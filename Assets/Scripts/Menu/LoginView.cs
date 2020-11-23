@@ -11,12 +11,12 @@ using System.Globalization;
 /// </summary>
 public class LoginView : Observer
 {
-    public String serverHOST = "158.69.209.69";//ip servidor no qual que entrar
+    public String serverHOST = "192.168.30.106";//ip servidor no qual que entrar (caso não for o local)
     public int serverPORT = 8083;
     ServerSender serverSender; //Classe que recebe os dados dessa classe e envia para o código de emissão do servidor
     public GameObject panelLogin; //Próprio painel
-    public InputField inputUser,inputSenha;
-    public Toggle toggleLocalServer;
+    public InputField inputUser,inputSenha;//inputField com os dados escritos do usuário
+    public Toggle toggleLocalServer;//caixinha pra definir se irá conectar no servidor local ou não
 
 
     ServerController controlador;//Classe que envia os dados para cá

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 /// <summary>
 /// Classe responsável pelo manuseio de dados da tela principal do usuário.
 /// Apresenta os dados do usuário e possibilita a entrada no mapa.
@@ -13,7 +13,7 @@ public class PrincipalPanel : Observer
     
     ServerController controlador;//Classe que envia os dados de comportamento de estado para cá
 
-    public Text nomeUsuario, nomeCaminhao, level, frete;//Textos com dados que são apresentados para o usuário
+    public Text nameUser, nameVehicle, level, delivery;//Textos com dados que são apresentados para o usuário
     void Start(){
         criarObservador();
     }
@@ -52,6 +52,7 @@ public class PrincipalPanel : Observer
         
         if(notificationTypes == NotificationTypes.login){ //Caso o login seja realizado com sucesso
             PanelPrincipalEnabled();//O PainelPrincipal é ativado
+            OrganizePrincipalPanel(value);
         }
     }
 
@@ -60,11 +61,18 @@ public class PrincipalPanel : Observer
     /// Função que irá colocar os dados do usuário recebidos pelo servidor no PainelPrincipal
     /// </summary>
     /// <param name="usuario">Dados do usuário</param>
-    public void OrganizePrincipalPanel(Usuario usuario){
-        nomeCaminhao.text = usuario.Getcaminhao();
-        nomeUsuario.text = usuario.Getname();
-        level.text = usuario.Getlevel().ToString();
-        frete.text = usuario.Getfrete();
+    public void OrganizePrincipalPanel(object user){
+
+        string name = ServerController.getword(user.ToString(), 3);
+        string lvl = ServerController.getword(user.ToString(), 4);
+        Usuario usuario = new Usuario(name, Int32.Parse(lvl), "testeVehicle", "testeDelivery");
+
+        nameVehicle.text = usuario.GetVehicle();
+        nameUser.text = usuario.GetName();
+        level.text = usuario.GetLevel().ToString();
+        delivery.text = usuario.GetDelivery();
+
+        //print(user);
     }
 }
 
