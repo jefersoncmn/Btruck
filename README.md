@@ -1,5 +1,5 @@
 <h1 align="center">BTruck</h1>
-<p align="center">This code is discontinued</p>
+<p align="center">This project was paused</p>
 
 Tabela de conteúdos
 =================
@@ -12,12 +12,14 @@ Tabela de conteúdos
 <!--te-->
 
 <h4 align="center"> 
-  BTruck :truck: discontinued... 
+  BTruck :truck: stopped... 
 </h4>
 
 # About
 
 Btruck is a truck driver simulator game.
+
+Principal code files: "Assets/Scripts/".
 
 # Study
 This study project about:
