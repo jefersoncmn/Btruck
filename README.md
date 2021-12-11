@@ -1,4 +1,4 @@
-<h1 align="center">BTruckOld</h1>
+<h1 align="center">BTruck</h1>
 <p align="center">This code is discontinued</p>
 
 Tabela de conteúdos
@@ -12,7 +12,7 @@ Tabela de conteúdos
 <!--te-->
 
 <h4 align="center"> 
-	🚧  BTruck :truck: In development...  🚧
+  BTruck :truck: discontinued... 
 </h4>
 
 # About
