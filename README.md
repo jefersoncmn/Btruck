@@ -42,13 +42,20 @@ Tools used:
 
 - [Unity](https://unity.com)
 
-# Autor
-<div align="center">
-<a href="https://www.linkedin.com/in/jefcmn/">
- <img style="border-radius: 50%;" src="./public/photo.jpeg" width="100px;" alt=""/>
- <br />
- <sub><b>Jeferson Carlos Martin</b></sub></a> <a href="https://www.linkedin.com/in/jefcmn/" title="LinkedIn"></a>
+<h2 align="center">Autor<h3/>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Jefersoncmn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jefcmn/)](https://www.linkedin.com/in/jefcmn/) 
-[![Gmail Badge](https://img.shields.io/badge/-jefersoncmnn@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:jefersoncmnn@gmail.com)
-</div>
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://github.com/jefersoncmn"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/51566081?v=4" width="100px;" alt=""/><br/><sub><b>Jeferson Carlos Martin</b></sub></a><br /><a href="https://github.com/jefersoncmn" title="Jeferson Carlos Martin"></a>
+    </td>
+</table>
+	
+## Meu contato
+
+:mailbox: [jefersoncmn@hotmail.com](jefersoncmn@hotmail.com)
+
+<div align="justify">
+
+[<img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/jefcmn/)
+[<img alt="Instagram" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>](https://www.instagram.com/jefersoncmn/)
+[<img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"/>](mailto:jefersoncmnn@gmail.com)
