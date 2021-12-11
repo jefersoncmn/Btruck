@@ -21,6 +21,8 @@ Btruck is a truck driver simulator game.
 
 # Study
 This study project about:
+- NodeJs;
+- Unity;
 - S.O.L.I.D;
 - Design Patterns (State, Observer, Singleton);
 - Unity Engine development;
@@ -30,8 +32,9 @@ This study project about:
 # Requirements
 
 Before starting, you need to install in your computer, those tools:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Unity](https://unity.com).
-A code editor too, like [VSCode](https://code.visualstudio.com/).
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org/en/)
+- A code editor too, like [VSCode](https://code.visualstudio.com/)
 
 # Technologies
 
